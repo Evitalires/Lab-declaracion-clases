@@ -189,3 +189,40 @@ class Circulo extends Figura {
 
 const testCirculo = new Circulo("Azul", 20);
 testCirculo.area()
+
+// Ejercicio 5: Sistema de animales
+
+class Animal {
+    constructor(nombre, edad, sonido) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sonido = sonido;
+    }
+    emitirSonido(){
+        console.log(`El animal ${this.nombre}, con edad ${this.edad} dice: ${this.sonido}`);   
+    }
+}
+const testAnimal = new Animal("Estrella", "15 años", "Whouff");
+testAnimal.emitirSonido();
+
+class Perro extends Animal {
+    constructor(nombre, edad, sonido) {
+        super(nombre, edad, sonido);
+    }
+    emitirSonido(){
+        console.log(`El perro ${this.nombre}, con edad ${this.edad} dice: ${this.sonido}`);   
+    }
+}
+const testPerro = new Perro("Luna", "14 años", "woooof");
+testPerro.emitirSonido();
+
+class Gato extends Animal {
+    constructor(nombre, edad, sonido) {
+        super(nombre, edad, sonido);
+    }
+    emitirSonido(){
+        console.log(`El Gato ${this.nombre}, con edad ${this.edad} dice: ${this.sonido}`);   
+    }
+}
+const testGato = new Gato("Lucero", "3 años", "nuao");
+testGato.emitirSonido();

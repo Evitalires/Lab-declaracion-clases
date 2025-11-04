@@ -149,3 +149,43 @@ class Laptop extends Producto {
 
 const testLaptop = new Laptop("Macbook Pro", 800000, "Apple", "Apple Core 5", "17" );
 testLaptop.darDescripcion();   
+
+// Ejercicio 4: Sistema de figuras geométricas
+class Figura {
+    constructor(color) {
+        this.color = color;
+    }
+    area(){
+        console.log("El area de la figura es: 0");
+    }
+}
+const testFigura = new Figura("Rojo");
+testFigura.area();
+
+class Rectangulo extends Figura {
+    constructor(color,base,altura) {
+        super(color);
+        this.base = base;
+        this.altura = altura;
+    }
+    area(){
+        console.log(`El area del rectangulo de color ${this.color}, con base ${this.base} y altura ${this.altura} es: ${this.base * this.altura} centimetros cuadrados.`);      
+    }
+}
+
+const testRectangulo = new Rectangulo("color", 10, 15);
+testRectangulo.area()
+
+class Circulo extends Figura {
+    constructor(color, radio) {
+        super(color);
+        this.radio = radio;
+    }
+    area(){
+        let areaCirculo = (this.radio ** 2) * Math.PI; 
+        console.log(`El area del Circulo de color ${this.color}, con radio ${this.radio}  es: ${areaCirculo.toFixed(2)} centimetros cuadrados.`);      
+    }
+}
+
+const testCirculo = new Circulo("Azul", 20);
+testCirculo.area()
